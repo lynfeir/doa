@@ -42,7 +42,7 @@ export default function DesignOverAtlanta() {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 80; // Height of fixed navbar
+      const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -65,13 +65,44 @@ export default function DesignOverAtlanta() {
     setTimeout(() => setFormStatus(''), 5000);
   };
 
+  // UPDATE THESE IMAGE FILENAMES TO YOUR JPG FILES
   const projects = [
-    { id: 1, title: 'Corporate Rebrand', category: 'Branding', color: 'from-blue-600 to-blue-800' },
-    { id: 2, title: 'E-Commerce Platform', category: 'Web Design', color: 'from-blue-500 to-blue-700' },
-    { id: 3, title: 'Mobile App Interface', category: 'UI/UX Design', color: 'from-blue-700 to-blue-900' },
-    { id: 4, title: 'Marketing Campaign', category: 'Digital Marketing', color: 'from-blue-600 to-indigo-700' },
-    { id: 5, title: 'Product Launch', category: 'Brand Strategy', color: 'from-blue-500 to-blue-600' },
-    { id: 6, title: 'Dashboard Design', category: 'Interface Design', color: 'from-blue-800 to-indigo-800' }
+    { 
+      id: 1, 
+      title: 'Fit4Lyfe', 
+      category: 'Lead Generation', 
+      image: 'fit4lyfe.jpg' // Replace with your filename
+    },
+    { 
+      id: 2, 
+      title: 'Print Advertising', 
+      category: 'Brochure', 
+      image: 'print-advertising.jpg' // Replace with your filename
+    },
+    { 
+      id: 3, 
+      title: 'Pine Crest Camp', 
+      category: 'Showcase/Business Display', 
+      image: 'pine-crest-camp.jpg' // Replace with your filename
+    },
+    { 
+      id: 4, 
+      title: 'Marketing Campaign', 
+      category: 'Digital Marketing', 
+      image: 'marketing-campaign.jpg' // Replace with your filename
+    },
+    { 
+      id: 5, 
+      title: 'Product Launch', 
+      category: 'Brand Strategy', 
+      image: 'product-launch.jpg' // Replace with your filename
+    },
+    { 
+      id: 6, 
+      title: 'Dashboard Design', 
+      category: 'Interface Design', 
+      image: 'dashboard-design.jpg' // Replace with your filename
+    }
   ];
 
   return (
@@ -225,10 +256,12 @@ export default function DesignOverAtlanta() {
                 key={project.id}
                 className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all cursor-pointer bg-white"
               >
-                <div className={`h-64 bg-gradient-to-br ${project.color} flex items-center justify-center`}>
-                  <div className="text-center text-white p-6">
-                    <div className="text-6xl font-bold opacity-20 mb-4">{project.id}</div>
-                  </div>
+                <div className="h-64 bg-gray-200 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <div className="p-6 bg-white">
                   <div className="text-sm text-blue-600 font-medium mb-2">{project.category}</div>
