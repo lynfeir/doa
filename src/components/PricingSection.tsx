@@ -1,0 +1,192 @@
+import Link from "next/link";
+
+export default function PricingSection() {
+  return (
+    <section id="plans" className="py-24 bg-bg-dark">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center max-w-2xl mx-auto mb-6">
+          <span className="text-accent text-xs font-bold uppercase tracking-[0.12em] block mb-3">
+            Monthly Plans
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-text-white mb-4">
+            Hosting That Pays for Itself
+          </h2>
+          <p className="text-text-muted text-lg">
+            Most hosting companies charge $15&ndash;$25/mo for basic hosting alone.
+            Our plans start at <strong className="text-text-white">$3/mo</strong> &mdash; that&apos;s
+            roughly $36/year. At those rates, the cost of your entire website
+            design is paid off within a few months of savings.
+          </p>
+        </div>
+
+        {/* Savings Callout */}
+        <div className="reveal max-w-3xl mx-auto mb-14 bg-gradient-to-r from-emerald/10 to-accent-soft border border-emerald/20 rounded-2xl p-8 text-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-4">
+            <div>
+              <div className="text-text-muted text-xs uppercase tracking-wider mb-1">
+                Typical Hosting Elsewhere
+              </div>
+              <div className="text-3xl font-extrabold text-rose line-through decoration-rose/40">
+                $20/mo
+              </div>
+              <div className="text-text-muted text-sm">$240/year</div>
+            </div>
+            <div className="text-3xl text-text-muted hidden sm:block">→</div>
+            <div>
+              <div className="text-text-muted text-xs uppercase tracking-wider mb-1">
+                Our Starter Plan
+              </div>
+              <div className="text-3xl font-extrabold text-emerald">$3/mo</div>
+              <div className="text-text-muted text-sm">$36/year</div>
+            </div>
+            <div className="text-3xl text-text-muted hidden sm:block">= </div>
+            <div>
+              <div className="text-text-muted text-xs uppercase tracking-wider mb-1">
+                You Save
+              </div>
+              <div className="text-3xl font-extrabold text-accent-light">
+                $204/yr
+              </div>
+              <div className="text-emerald text-sm font-semibold">85% less</div>
+            </div>
+          </div>
+          <p className="text-text-muted text-sm max-w-xl mx-auto">
+            A $200 website design + $36/year hosting = <strong className="text-text-white">$236 your first year</strong>.
+            That&apos;s less than what most people pay for hosting alone elsewhere. By month 12,
+            the design has already paid for itself.
+          </p>
+        </div>
+
+        {/* Pricing Cards */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* Starter */}
+          <div className="reveal bg-bg-card border border-border-dark rounded-2xl p-8 flex flex-col transition-all hover:-translate-y-1 hover:border-white/[0.12]">
+            <div className="text-xs font-bold uppercase tracking-[0.1em] text-text-muted mb-2">
+              Starter
+            </div>
+            <div className="text-5xl font-extrabold text-text-white leading-none mb-1">
+              $3<span className="text-base font-normal text-text-muted">/mo</span>
+            </div>
+            <div className="text-sm text-text-muted mb-6">
+              Just $36/year &mdash; unbeatable value
+            </div>
+            <ul className="space-y-3 mb-8 flex-1">
+              {[
+                "Fast, secure hosting",
+                "SSL certificate included",
+                "Monthly site backup",
+                "Email support (48hr response)",
+                "Uptime monitoring",
+              ].map((f) => (
+                <li
+                  key={f}
+                  className="text-text-muted text-sm flex items-center gap-2.5"
+                >
+                  <span className="text-emerald font-bold text-xs shrink-0">
+                    ✓
+                  </span>
+                  {f}
+                </li>
+              ))}
+            </ul>
+            <Link
+              href="/contact"
+              className="w-full text-center border border-white/20 hover:border-white/40 hover:bg-white/[0.04] text-text-white font-semibold py-3 rounded-lg transition-all"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Professional */}
+          <div className="reveal relative bg-bg-card border border-accent rounded-2xl p-8 flex flex-col transition-all hover:-translate-y-1 glow-accent">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-[11px] font-bold uppercase tracking-wider px-4 py-1 rounded-full">
+              Most Popular
+            </div>
+            <div className="text-xs font-bold uppercase tracking-[0.1em] text-text-muted mb-2">
+              Professional
+            </div>
+            <div className="text-5xl font-extrabold text-text-white leading-none mb-1">
+              $9<span className="text-base font-normal text-text-muted">/mo</span>
+            </div>
+            <div className="text-sm text-text-muted mb-6">
+              Support + monthly updates
+            </div>
+            <ul className="space-y-3 mb-8 flex-1">
+              {[
+                "Everything in Starter",
+                "Priority support (same-day)",
+                "2 hours of site updates/mo",
+                "Performance & SEO monitoring",
+                "Analytics dashboard",
+                "Quarterly strategy check-in",
+              ].map((f) => (
+                <li
+                  key={f}
+                  className="text-text-muted text-sm flex items-center gap-2.5"
+                >
+                  <span className="text-emerald font-bold text-xs shrink-0">
+                    ✓
+                  </span>
+                  {f}
+                </li>
+              ))}
+            </ul>
+            <Link
+              href="/contact"
+              className="w-full text-center bg-accent hover:bg-accent-light text-white font-semibold py-3 rounded-lg transition-all"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Enterprise */}
+          <div className="reveal bg-bg-card border border-border-dark rounded-2xl p-8 flex flex-col transition-all hover:-translate-y-1 hover:border-white/[0.12]">
+            <div className="text-xs font-bold uppercase tracking-[0.1em] text-text-muted mb-2">
+              Enterprise
+            </div>
+            <div className="text-5xl font-extrabold text-text-white leading-none mb-1">
+              $19<span className="text-base font-normal text-text-muted">/mo</span>
+            </div>
+            <div className="text-sm text-text-muted mb-6">
+              Dedicated partner for growth
+            </div>
+            <ul className="space-y-3 mb-8 flex-1">
+              {[
+                "Everything in Professional",
+                "Dedicated Slack/phone support",
+                "5 hours of updates/mo",
+                "AI tool maintenance included",
+                "Advanced analytics & reporting",
+                "Priority feature requests",
+                "99.9% uptime SLA",
+              ].map((f) => (
+                <li
+                  key={f}
+                  className="text-text-muted text-sm flex items-center gap-2.5"
+                >
+                  <span className="text-emerald font-bold text-xs shrink-0">
+                    ✓
+                  </span>
+                  {f}
+                </li>
+              ))}
+            </ul>
+            <Link
+              href="/contact"
+              className="w-full text-center border border-white/20 hover:border-white/40 hover:bg-white/[0.04] text-text-white font-semibold py-3 rounded-lg transition-all"
+            >
+              Get Started
+            </Link>
+          </div>
+        </div>
+
+        {/* Bottom note */}
+        <p className="text-center text-text-muted text-sm mt-8 max-w-xl mx-auto">
+          No contracts. Cancel anytime. All plans include hosting, SSL, and backups.
+          Compare that to the $15&ndash;$25/mo most companies charge for hosting alone &mdash;
+          before you even get support.
+        </p>
+      </div>
+    </section>
+  );
+}
