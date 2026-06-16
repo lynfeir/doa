@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hunter Weeks — Full-Stack Web Developer</title>
+<style>
+  /* ---------------------------------------------------------------
+     ATS-safe, print-first resume.
+     - Single column, standard section headings, real selectable text.
+     - No tables, icons, or multi-column layout for content.
+     - Open in a browser and use Print > "Save as PDF" (Letter, no margins
+       added by the browser — the page sets its own).
+  ----------------------------------------------------------------*/
+  :root {
+    --ink: #16202e;        /* body text */
+    --ink-soft: #475569;   /* secondary text */
+    --accent: #4f46e5;     /* Design over Atlanta indigo */
+    --rule: #d7dce5;
+    --page: 7.5in;         /* content width inside 0.5in margins on Letter */
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #eef1f6;
+    color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.36;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet {
+    width: 8.5in;
+    margin: 24px auto;
+    padding: 0.45in 0.6in 0.4in;
+    background: #fff;
+    box-shadow: 0 6px 30px rgba(15, 23, 42, 0.12);
+  }
+  @media screen { .sheet { min-height: 11in; } }
+
+  /* ---------- Header ---------- */
+  header { border-bottom: 2px solid var(--accent); padding-bottom: 10px; margin-bottom: 11px; }
+  .name {
+    font-size: 25pt;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin: 0;
+    color: var(--ink);
+    text-transform: uppercase;
+  }
+  .title {
+    font-size: 11.5pt;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 3px 0 8px;
+    letter-spacing: 0.2px;
+  }
+  .contact {
+    font-size: 9.5pt;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .contact a { color: var(--ink-soft); text-decoration: none; }
+  .contact .sep { color: var(--rule); margin: 0 6px; }
+
+  /* ---------- Sections ---------- */
+  section { margin-bottom: 10px; }
+  h2 {
+    font-size: 10pt;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 7px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .summary { margin: 0; color: var(--ink); }
+
+  /* ---------- Experience ---------- */
+  .job { margin-bottom: 9px; page-break-inside: avoid; }
+  .job:last-child { margin-bottom: 0; }
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .job-role { font-weight: 700; font-size: 10.5pt; color: var(--ink); }
+  .job-org { font-weight: 600; color: var(--accent); }
+  .job-meta {
+    font-size: 9pt;
+    color: var(--ink-soft);
+    white-space: nowrap;
+    font-style: italic;
+  }
+  ul { margin: 3px 0 0; padding-left: 16px; }
+  li { margin-bottom: 1.5px; }
+  li::marker { color: var(--accent); }
+
+  /* ---------- Skills ---------- */
+  .skills-grid { display: grid; grid-template-columns: 1fr; gap: 3px; }
+  .skill-row { display: flex; gap: 8px; }
+  .skill-cat { font-weight: 700; color: var(--ink); min-width: 132px; flex-shrink: 0; }
+  .skill-val { color: var(--ink-soft); }
+
+  /* ---------- Two-up rows (education / certs) ---------- */
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .muted { color: var(--ink-soft); }
+
+  /* ---------- Print ---------- */
+  @page { size: Letter; margin: 0.45in 0.55in; }
+  @media print {
+    html, body { background: #fff; font-size: 10pt; }
+    .sheet { width: auto; min-height: 0; margin: 0; padding: 0; box-shadow: none; }
+    a { color: var(--ink-soft) !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="sheet">
+
+    <header>
+      <h1 class="name">Hunter Weeks</h1>
+      <div class="title">Full-Stack Web Developer &nbsp;·&nbsp; Founder, Design over Atlanta</div>
+      <div class="contact">
+        <a href="mailto:lynfeir@gmail.com">lynfeir@gmail.com</a><span class="sep">|</span>
+        (470) 758-3549<span class="sep">|</span>
+        Dallas, GA<span class="sep">|</span>
+        <a href="https://designoveratlanta.com">designoveratlanta.com</a>
+        <span class="sep">|</span> Open to remote
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p class="summary">
+        Self-taught full-stack developer with 5+ years building custom web applications,
+        automations, and AI-powered tools for 150+ small businesses. Founder of Design over
+        Atlanta, where I design, code, ship, and support production sites end-to-end &mdash;
+        from React/Next.js front ends to Python back-end automations. Strong record of turning
+        manual workflows into software that saves clients time and money, backed by a 100%
+        client-retention rate.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-row"><span class="skill-cat">Languages</span><span class="skill-val">JavaScript / TypeScript, Python, HTML5, CSS, SQL, C++</span></div>
+        <div class="skill-row"><span class="skill-cat">Front End</span><span class="skill-val">React, Next.js, Tailwind CSS, responsive &amp; accessible UI</span></div>
+        <div class="skill-row"><span class="skill-cat">Back End &amp; Data</span><span class="skill-val">REST API design &amp; integration, database design, web scraping, workflow automation</span></div>
+        <div class="skill-row"><span class="skill-cat">AI &amp; Automation</span><span class="skill-val">LLM-powered tools, custom scripts, data pipelines, process automation</span></div>
+        <div class="skill-row"><span class="skill-cat">Platforms &amp; Tools</span><span class="skill-val">Git, Vercel, WordPress, Shopify, SEO, Microsoft Excel (advanced)</span></div>
+        <div class="skill-row"><span class="skill-cat">Professional</span><span class="skill-val">Client relationship management, project scoping &amp; delivery, technical support, B2B sales &amp; lead generation</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <div><span class="job-role">Founder &amp; Full-Stack Developer</span> &mdash; <span class="job-org">Design over Atlanta</span></div>
+          <div class="job-meta">2020 &ndash; Present &nbsp;·&nbsp; Atlanta, GA / Remote</div>
+        </div>
+        <ul>
+          <li>Designed, built, and shipped 150+ custom websites and web apps for small businesses, hand-coding production sites in React/Next.js instead of templates.</li>
+          <li>Built automated data-scraping and data-entry tools that cut clients' manual data work by up to 80%.</li>
+          <li>Developed inventory-management and booking systems in Python and SQL, replacing manual processes and eliminating part-time admin costs for clients.</li>
+          <li>Delivered most design work in 24&ndash;72 hours and full websites in 3&ndash;7 days through a demo-first process that lets clients approve before paying.</li>
+          <li>Maintained a 100% client-retention rate by owning the full lifecycle &mdash; scoping, build, launch, hosting, and ongoing technical support.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div><span class="job-role">Project &amp; Estimating Support (Carpentry)</span> &mdash; <span class="job-org">Summ Design</span></div>
+          <div class="job-meta">Nov 2022 &ndash; Present &nbsp;·&nbsp; Canton, GA</div>
+        </div>
+        <ul>
+          <li>Built advanced Excel models for project calculations, material tracking, and cost analysis on custom-cabinetry jobs.</li>
+          <li>Coordinated timelines and team communication to keep multi-stage builds on schedule.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div><span class="job-role">Technical &amp; Customer Support Experience</span></div>
+          <div class="job-meta">Selected prior roles</div>
+        </div>
+        <ul>
+          <li>Provided desktop, mobile, and software troubleshooting support and trained junior team members on process and tooling.</li>
+          <li>Ran B2B lead generation and sales outreach &mdash; prospecting, product demos, objection handling, and pipeline tracking &mdash; sharpening the client-facing skills now used to win and keep web-development clients.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Additional Experience</h2>
+      <p class="muted" style="margin:0;">
+        Customer-facing roles (2021&ndash;2025) showing reliability, safety, and service under
+        pressure: Lifeguard &mdash; Bridgemill Athletic Club &nbsp;·&nbsp; Crew / Cashier &mdash;
+        McDonald's &nbsp;·&nbsp; Delivery Driver &mdash; Domino's &nbsp;·&nbsp; Auto Detailing
+        &mdash; Cherokee Auto Spa.
+      </p>
+    </section>
+
+    <section style="margin-bottom:0;">
+      <h2>Education &amp; Certifications</h2>
+      <p style="margin:0;"><strong>High School Diploma</strong>
+        <span class="muted">&nbsp;&nbsp;|&nbsp;&nbsp; CPR &amp; First Aid Certified &nbsp;·&nbsp; Driver's License (Non-CDL Class C)</span>
+      </p>
+    </section>
+
+  </div>
+</body>
+</html>
