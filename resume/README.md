@@ -22,5 +22,5 @@ Redesigned, ATS-optimized resume and a 2026 job-search playbook.
 - Add a GitHub and/or LinkedIn link to the header if you have them.
 - Copy-paste the PDF into a plain-text editor to confirm it reads in order (ATS test).
 
-The design uses the Design over Atlanta indigo (#4f46e5) but stays single-column with
+The design uses a warm terracotta accent (#c2410c) but stays single-column with
 standard headings and real selectable text so applicant tracking systems parse it correctly.
